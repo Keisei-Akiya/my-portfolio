@@ -1,7 +1,7 @@
 import { tv } from "tailwind-variants";
 
 export const layoutWrapper = tv({
-  base: "min-h-screen transition-colors",
+  base: "flex min-h-screen flex-col transition-colors",
   variants: {
     theme: {
       light: "bg-white text-gray-950",

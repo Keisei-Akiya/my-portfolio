@@ -4,8 +4,8 @@ export const headerWrapper = tv({
   base: "flex items-center justify-between p-4 px-6 shadow-sm transition-colors",
   variants: {
     theme: {
-      light: "bg-white text-gray-950",
-      dark: "bg-gray-950 text-gray-200",
+      light: "border-b border-gray-300 bg-white text-gray-950",
+      dark: "border-b border-gray-800 bg-gray-950 text-gray-200",
     },
   },
 });

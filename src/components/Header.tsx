@@ -4,10 +4,9 @@ import { SocialLinks } from "./SocialLinks";
 
 interface HeaderProps {
   theme: "light" | "dark";
-  onToggleTheme: () => void;
 }
 
-export function Header({ theme, onToggleTheme }: HeaderProps) {
+export function Header({ theme }: HeaderProps) {
   const location = useLocation();
 
   return (
@@ -28,9 +27,6 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
           About
         </Link>
       </nav>
-      <button onClick={onToggleTheme}>
-        {theme === "light" ? "🌞 Light Mode" : "🌙 Dark Mode"}
-      </button>
       <SocialLinks />
     </header>
   );
