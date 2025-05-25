@@ -15,7 +15,7 @@ export function Header({ theme }: HeaderProps) {
         My Portfolio
       </Link>
       <div className="ml-auto flex items-center gap-4">
-        <nav className="ml-auto flex gap-4">
+        <nav className="flex gap-4">
           <Link
             to={"/"}
             className={navLink({ active: location.pathname === "/" })}
