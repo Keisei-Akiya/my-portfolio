@@ -11,23 +11,27 @@ export function Header({ theme }: HeaderProps) {
 
   return (
     <header className={headerWrapper({ theme })}>
-      <span>My Portfolio</span>
-      <nav>
-        <Link
-          to={"/"}
-          className={navLink({ active: location.pathname === "/" })}
-        >
-          Home
-        </Link>{" "}
-        |{" "}
-        <Link
-          to={"/about"}
-          className={navLink({ active: location.pathname === "/about" })}
-        >
-          About
-        </Link>
-      </nav>
-      <SocialLinks />
+      <Link to={"/"} className="flex-shrink-0 text-lg font-bold">
+        My Portfolio
+      </Link>
+      <div className="ml-auto flex items-center gap-4">
+        <nav className="ml-auto flex gap-4">
+          <Link
+            to={"/"}
+            className={navLink({ active: location.pathname === "/" })}
+          >
+            Home
+          </Link>
+          <span>|</span>
+          <Link
+            to={"/about"}
+            className={navLink({ active: location.pathname === "/about" })}
+          >
+            About
+          </Link>
+        </nav>
+        <SocialLinks />
+      </div>
     </header>
   );
 }

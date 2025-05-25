@@ -13,9 +13,13 @@ export const headerWrapper = tv({
 export const navLink = tv({
   base: "text-sm font-medium transition-colors duration-200",
   variants: {
+    theme: {
+      light: "text-gray-950",
+      dark: "text-gray-200",
+    },
     active: {
-      true: "text-blue-600 underline",
-      false: "text-gray-600 hover:text-blue-400",
+      true: "underline",
+      false: "hover:text-blue-400",
     },
   },
 });
