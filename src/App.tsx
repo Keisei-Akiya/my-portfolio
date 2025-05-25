@@ -4,7 +4,13 @@ import { router } from "./routes";
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-white text-gray-900 transition-colors dark:bg-gray-900 dark:text-white">
+          Loading...
+        </div>
+      }
+    >
       <RouterProvider router={router} />
     </Suspense>
   );
