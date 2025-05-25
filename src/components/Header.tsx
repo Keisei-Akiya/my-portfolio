@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { headerWrapper, navLink } from "../variants/header";
+import { SocialLinks } from "./SocialLinks";
 
 interface HeaderProps {
   theme: "light" | "dark";
@@ -30,6 +31,7 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
       <button onClick={onToggleTheme}>
         {theme === "light" ? "🌞 Light Mode" : "🌙 Dark Mode"}
       </button>
+      <SocialLinks />
     </header>
   );
 }

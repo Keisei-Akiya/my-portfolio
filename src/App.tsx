@@ -6,7 +6,7 @@ function App() {
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-screen items-center justify-center bg-white text-gray-900 transition-colors dark:bg-gray-900 dark:text-white">
+        <div className="flex min-h-screen items-center justify-center bg-white text-gray-950 transition-colors dark:bg-gray-950 dark:text-gray-200">
           Loading...
         </div>
       }

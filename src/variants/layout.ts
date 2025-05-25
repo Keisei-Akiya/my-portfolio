@@ -4,8 +4,8 @@ export const layoutWrapper = tv({
   base: "min-h-screen transition-colors",
   variants: {
     theme: {
-      light: "bg-white text-gray-900",
-      dark: "bg-gray-900 text-white",
+      light: "bg-white text-gray-950",
+      dark: "bg-gray-950 text-gray-200",
     },
   },
   defaultVariants: {
