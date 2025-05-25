@@ -1,7 +1,7 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
-import { navLink } from "../variants/navLink";
+import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { layoutWrapper } from "../variants/layout";
+import { Header } from "../components/Header";
 
 export default function Root() {
   const location = useLocation();
@@ -31,27 +31,7 @@ export default function Root() {
 
   return (
     <div className={layoutWrapper({ theme })}>
-      <header>
-        <span>My Portfolio</span>
-        <nav>
-          <Link
-            to={"/"}
-            className={navLink({ active: location.pathname === "/" })}
-          >
-            Home
-          </Link>{" "}
-          |{" "}
-          <Link
-            to={"/about"}
-            className={navLink({ active: location.pathname === "/about" })}
-          >
-            About
-          </Link>
-        </nav>
-        <button onClick={toggleTheme}>
-          {theme === "light" ? "🌞 Light Mode" : "🌙 Dark Mode"}
-        </button>
-      </header>
+      <Header theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Outlet />
       </main>
